@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>notes</title>
+</head>
+<body>
+    <h1>Notes</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>TEXT</th>
+            <th>DATE</th>
+        </tr>
+        <tr th:each="n: ${notes}">
+            <td th:text="${n.id}"></td>
+            <td th:text="${n.title}"></td>
+            <td th:text="${n.text}"></td>
+            <td th:text="${n.editDate}"></td>
+        </tr>
+    </table>
+    <a href="/create-note">Add note</a>
+    <a href="/edit-note">Edit note</a>
+    <a href="/delete-note">Delete note</a>
+</body>
+</html>

@@ -47,7 +47,7 @@ public class NotesController {
     }
 
     @PostMapping("delete-note")
-    private String DeleteNote(int id, String title, String text){
+    private String DeleteNote(int id){
         notesService.deleteNotes(id);
         return "redirect:/notes";
     }
